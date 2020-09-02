@@ -1,0 +1,132 @@
+﻿@model PartyInvites.Models.GuestResponseModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Guest Response</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <center>
+        <h1 class="text-success"> Reservation Form</h1>
+        <div class="justify-content-xl-center"
+             style="background: url('../../wwwroot/slider/AdobeStock_206356322-e1543451721266.jpeg');">
+
+            <div class="col-md-6">
+
+                <form asp-action="RsvpForm" method="post" style="border: 1px solid #cccccc;margin: 2px;  align-content: center;">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" placeholder="James Conor Willams" type="text" required />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" placeholder="example@mail.com" type="email" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="Phone" class="control-label"></label>
+                        <input asp-for="Phone" class="form-control" placeholder="+2139434904" type="tel" required />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-5" style="padding:5px">
+                        <label asp-for="RSVpType" class="control-label">Room Type</label>
+                        <select asp-for="RSVpType" class="dropdown col-md-9">
+                            <option name="none" value="null"> Select</option>
+                            <option name="Rsvp" value="Single">Single</option>
+                            <option name="Rsvp" value="Double">Double</option>
+                            <option name="Rsvp" value="Suit">Suite</option>
+                            <option name="Rsvp" value="Exclusive">Exclusive (VIP)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="Number" class="control-label">Number of Rooms</label>
+                        <input asp-for="Number" class="form-control" placeholder="0" type="number"  min="1" value="0" required />
+                        <span asp-validation-for="Number" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="NumberKids" class="control-label">Number of Kids</label>
+                        <input asp-for="NumberKids" class="form-control" placeholder="0" type="number"  min="0" value="0" required />
+                        <span asp-validation-for="NumberKids" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="GetDateTimeIn" class="control-label">Date,Time Of Arrival</label>
+                        <input asp-for="GetDateTimeIn" class="form-control" type="datetime-local" required />
+                        <span asp-validation-for="GetDateTimeIn" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group" style="padding:5px">
+                        <label asp-for="GetDateTimeOut" class="control-label">Date,Time Of Departure</label>
+                        <input asp-for="GetDateTimeOut" class="form-control" type="datetime-local" required />
+                        <span asp-validation-for="GetDateTimeOut" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group" style="padding:15px">
+                        <input type="submit" value="Submit" class="btn-success" />
+                    </div>
+
+
+                    <h6 class="text-danger">
+                        @ViewBag.Error
+                    </h6>
+                </form>
+
+
+            </div>
+
+        </div>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2020 - Vacation World  Customer Careline- <a asp-area="" asp-controller="Home" asp-action="Call">08182878405</a>
+            </div>
+            </footer>
+    </center>
+    
+
+ 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

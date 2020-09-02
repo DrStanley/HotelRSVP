@@ -1,0 +1,145 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+<link href="~/css/animate.min.css" rel="stylesheet">
+<link href="~/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/css/lightbox.css" rel="stylesheet">
+<link href="~/css/main.css" rel="stylesheet">
+<link id="css-preset" href="~/css/presets/preset1.css" rel="stylesheet">
+<link href="~/css/responsive.css" rel="stylesheet">
+<script src="~/js/html5shiv.js"></script>
+<script src="~/js/respond.min.js"></script>
+
+
+<script type="text/javascript" src="~/js/jquery.js"></script>
+<script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="~/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="~/js/wow.min.js"></script>
+<script type="text/javascript" src="~/js/mousescroll.js"></script>
+<script type="text/javascript" src="~/js/smoothscroll.js"></script>
+<script type="text/javascript" src="~/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="~/js/lightbox.min.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+
+
+<div class="text-dark">
+    <h1>
+        @ViewBag.Greeting,
+    </h1>
+
+    <p>
+        We're going to have an exciting Vacation.<br />
+    </p>
+
+    <div>
+        <table class="table-responsive"  style="margin-bottom:10px">
+
+            <tr>
+                <td>
+                    <img src="~/slider/2c9e12b4_z.jpg" style="width:500px; height: 200px;" />
+                </td>
+                <td colspan="2">
+                    <img src="~/slider/exx.jpg" style="width:500px; height: 200px;" />
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="~/slider/AdobeStock_206356322-e1543451721266.jpeg " style="width:500px; height: 200px;" />
+                </td>
+                <td colspan="2">
+                    <img src="~/slider/de16b782fa853c08baefd4435c9f6eed.jpg" style="width:500px; height: 200px;" />
+                </td>
+
+            </tr>
+
+        </table>
+
+        <div class="row">
+            <center>
+                <div class="text-center col-sm-8 col-sm-offset-2 wow fadeInUp " data-wow-duration="1200ms" data-wow-delay="300ms">
+                    <h2>Price Listing</h2>
+                    <p>
+                        At Vacation World we offers so many deliverables and happines to couples, families and individuals. Come and Have the Best time of your
+                        <b>LIFE</b>
+                    </p>
+                </div>
+            </center>
+            
+        </div>
+        <div id="Price" class=" text-black-50 justify-content-xl-center">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <h3>Single</h3>
+                        <div class="price">
+                            <img src="~/Image/Sing.png" style="width:200px; height: 100px;" />
+                            <h6>50$ per Night</h6>
+                        </div>
+                        <p>
+                            A room assigned to one person.It is best suited for personal Vacation.
+
+                            The room size or area of Single Rooms are generally between 37 m² to 45 m².
+                        </p>
+
+                        <a class="btn btn-lg btn-primary" asp-area="" asp-controller="Home" asp-action="RsvpForm">RSVP</a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <h3>Double</h3>
+                        <div class="price">
+                            <img src="~/Image/Double.png" style="width:200px; height: 100px;" />
+                            <h6>100$ per Night</h6>
+                        </div>
+                        <p>
+                            A room assigned to two people. May have one or more beds. It is best sutied for two friends Vacation.
+
+                            The room size or area of Double Rooms are generally between 40 m² to 45 m².
+                        </p>
+
+                        <a class="btn btn-lg btn-primary" asp-area="" asp-controller="Home" asp-action="RsvpForm">RSVP</a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
+                        <h3>Suite</h3>
+                        <div class="price">
+                            <img src="~/Image/Suite.png" style="width:200px; height: 100px;" />
+                            <h6>300$ per Night</h6>
+                        </div>
+                        <p>
+                            A parlour or living room connected with to one or more bedrooms. (A room with one or more bedrooms and a separate living space.)
+
+                            The room size or area of Suite rooms are generally between 70 m² to 100 m².
+                        </p>
+                        <a class="btn btn-lg btn-primary" asp-area="" asp-controller="Home" asp-action="RsvpForm">RSVP</a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
+                        <h3>Exclusive</h3>
+                        <div class="price">
+                            <img src="~/Image/Exclusive.png" style="width:200px; height: 100px;" />
+                            <h6>1000$ per Night</h6>
+                        </div>
+                        <p>
+                            The most expensive room provided. Usually known as  president suite.
+                            It has one or more bedrooms and a living space with a strong emphasis on grand in-room decoration, high-quality amenities and supplies,
+                            and tailor-made services.
+
+                            The room size or area of Presidential Suites are generally between 80 m² to 350 m².
+                        </p>
+                        <a class="btn btn-lg btn-primary" asp-area="" asp-controller="Home" asp-action="RsvpForm">RSVP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
