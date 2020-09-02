@@ -56,7 +56,8 @@ namespace PartyInvites.Controllers
 			}
 			else
 			{
-				ViewBag.Greeting = "Good Evening, " + guestResponse.Name;
+				ViewBag.Greeting = "Good Evening, " + guestResponse.Name+
+					"\n Your Reservation was completed We will call you to confirm. \nThank you";
 				int res = DbActions.CustomerRVSP(guestResponse);
 				if (res > 0)
 				{
